@@ -1,0 +1,8 @@
+---
+layout: default
+---
+<div class="post">
+	<h1>{{ page.title }}</h1>
+	<p class="subtitle">{{ page.date | date: "%B %d, %Y" }}, tags: {{ page.tags | join: ", " }}.</p>
+	<p>{{ content }}</p>
+</div>

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Blog moved to jekyll and github!
 tags: blog jekyll
 ---

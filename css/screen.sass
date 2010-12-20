@@ -1,0 +1,265 @@
+/* Common
+
+/* Global reset
+*
+  margin: 0
+  padding: 0
+  
+body
+  background-color: #fff
+  font: 13.34px helvetica, arial, clean, sans-serif
+  text-align: center
+  padding: 40px 20px 0 20px
+
+h1, h2, h3, h4, h5, h6
+  font-size: 100%
+h1
+  line-height: 110%
+  font-size: 35px
+  font-family: 'Myriad Pro', Helvetica, Arial, sans-serif
+  margin-bottom: 20px
+  a
+    color: #000
+    &:visited
+      color: #000
+h3, h4, h5
+  margin: 1.5em 0 0.8em 0
+
+p
+  margin: 1em 0
+
+a
+  color: #00A
+  text-decoration: none
+  &:hover
+    color: #000
+    text-decoration: underline
+  &:visited
+    color: #A0A
+  img
+    border: 0
+
+table
+  font-size: inherit
+  font: 100%
+  
+blockquote
+  margin: 10px 20px
+  font-style: italic
+
+
+/* Lists
+
+div.year
+  margin-bottom: 60px
+  &:last-child
+    margin-bottom: 0
+  h2.year
+    color: #888
+    float: left
+    margin: 0.2em 0 0 -3em
+    font-size: 250%
+  h3.month, h2.tag
+    margin-top: 0
+    
+ul.posts
+  list-style-type: none
+  margin-bottom: 2em
+  li
+    line-height: 1.75em
+    strong.date
+      color: #888
+      margin-right: 5px
+      .tag &
+        width: 6.5em
+        display: inline-block
+        text-align: right
+
+#search
+  margin: 25px 0
+  .text
+    width: 180px
+    font-size: 100%
+
+ol#tag-cloud
+  margin-bottom: 35px
+  li
+    display: inline
+    line-height: 150%
+    a
+      padding: 2px
+    &.tier-1
+      font-size: 75%
+    &.tier-2
+      font-size: 90%
+    &.tier-3
+      font-size: 105%
+    &.tier-4
+      font-size: 120%
+    &.tier-5
+      font-size: 135%
+    &.tier-6
+      font-size: 150%
+
+/* Site
+
+#site
+  font-size: 100%
+  text-align: left
+  line-height: 1.5em
+  width: 900px
+  margin: 0 auto 2em auto
+
+  #sidebar
+    float: right
+    width: 260px
+    margin-right: 1em
+    margin-bottom: 45px
+    #title
+      color: #DAA520
+      font-weight: bold
+      margin-bottom: 10px
+      font-size: 16px
+      text-align: center
+      a
+        color: #DAA520
+        &:hover
+          color: #000
+    #github, #tweets
+      margin-top: 45px
+    #github
+      text-align: center
+    #tweets
+      h2
+        margin-bottom: -5px
+      li
+        list-style-type: none
+        font-size: 12px
+        background: #eee
+        padding: 8px 10px
+        margin: 15px 0
+        &:after
+          content: ""
+          border: 8px solid transparent
+          border-top: 8px solid #eee
+          border-bottom: 0
+          width: 0
+          height: 0
+          display: block
+          margin: 5px 0 -15px 0
+            
+  #content
+    width: 550px
+    margin-left: 1em
+
+  #footer
+    clear: both
+    margin: 80px 0 -5px 0
+    font-size: 80%
+    a
+      color: #8085C1
+    
+
+/* About
+
+#about
+  #photo
+    float: left
+    margin: 0 15px 5px 0
+
+
+/* Posts
+
+#post
+  h1
+    margin-bottom: 0
+  .subtitle
+    color: #BBB
+    margin-top: 0
+    font-size: 13px
+    a
+      color: #777
+      
+  .center
+    text-align: center
+  img.bordered
+    border: 1px solid #AAA
+  .updated
+    background: #FFFEEB
+    border: 1px solid #AAA
+    border-width: 1px 0
+    padding: 10px
+    margin: 20px 10px
+    h5
+      margin: 6px 0
+    
+  /* standard
+  pre, code
+    font: 12px Monaco, sans-serif
+  pre
+    background-color: #eef
+    border: 1px solid #ddd
+    padding: 0.4em
+    margin: 20px 10px
+    overflow-x: auto
+    /* css-3
+    white-space: pre-wrap
+    /* Mozilla, since 1999
+    white-space: -moz-pre-wrap
+    /* Opera 4-6
+    white-space: -pre-wrap
+    /* Opera 7
+    white-space: -o-pre-wrap
+    /* Internet Explorer 5.5+
+    word-wrap: break-word
+    code
+      border: none
+  code
+    border: 1px solid #ddd
+    background-color: #eef
+    font-size: 95%
+    padding: 0 0.2em
+    &.kb
+      border-width: 2px
+      border-color: #dedede #bbb #bbb #dedede
+      -moz-border-radius: 5px
+      -webkit-border-radius: 5px
+      background: #EEE
+  
+  /* terminal
+
+  pre.terminal
+    border: 1px solid black
+    background-color: #333
+    color: white
+    code
+      background-color: #333
+
+  #older_and_newer
+    margin-top: 30px
+    strong
+      width: 6em
+      display: inline-block
+      text-align: right
+      margin-right: 5px
+
+/* Disqus comments
+
+#disqus_thread
+  margin-top: 45px
+  .dsq-item-cp, .dsq-comment-options, li[id^=dsq-more-], .dsq-by
+    display: none !important
+  #dsq-content #dsq-comments .dsq-comment-footer
+    margin-top: 5px
+
+/* Google 404 suggestions
+
+#goog-fixurl
+  margin: 25px 0 0 0
+  .content
+    width: auto
+    margin: 0
+  ul
+    list-style-type: none
+    li
+      margin: 15px 0

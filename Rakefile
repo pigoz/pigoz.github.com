@@ -22,6 +22,10 @@ task :cloud do
   end
 end
 
+task :css do
+  sass "screen"
+end
+
 desc "Build site using Jekyll"
 task :build => :cloud do
   jekyll

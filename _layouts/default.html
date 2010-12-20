@@ -4,9 +4,33 @@
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 	<title>{{ page.title }}</title>
+	<link rel="stylesheet" href="/css/screen.css" type="text/css">
+	<link rel="stylesheet" href="/css/syntax.css" type="text/css">
 </head> 
 <body>
-	<h1>{{ page.title }}</h1>
-	{{ content }}
+	<div id="site">
+		<div id="sidebar">
+			<div id="title">
+				<p>
+					<img src="/images/title.png" alt="" />
+				</p>
+				<p>
+					12dimensions
+				</p>
+				<p>
+					A blog by Stefano Pigozzi mostly on Ruby, Mac OSX and manga.
+				</p>
+				<form action="http://www.google.com/search" method="get" accept-charset="utf-8">
+					<input type="text" name="q" value="">
+					<input type="hidden" name="sitesearch" value="stefanopigozzi.com">
+					<input type="submit" value="Google!">
+				</form>
+				{% include tag-cloud.html %}
+			</div>
+		</div>
+		<div id="content">
+			{{ content }}
+		</div>
+	</div>
 </body>
 </html>
