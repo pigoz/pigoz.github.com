@@ -1,4 +1,4 @@
-/* Common */
+/* Colors */
 /* Global reset */
 * {
   margin: 0;
@@ -6,22 +6,23 @@
 
 body {
   background-color: white;
-  font: 13.34px Georgia, helvetica, arial, clean, sans-serif;
+  font: 1em 'Vollkorn', "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
   text-align: center;
   padding: 40px 20px 0 20px; }
+
+em {
+  padding: 0 0.2 em;
+  background-color: #fcfed7; }
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%; }
 
 h1 {
-  line-height: 110%;
-  font-size: 35px;
-  font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
-  margin-bottom: 20px; }
+  font: italic normal normal 2em/1em "Vollkorn", "Lucida Grande", "Trebuchet MS", Verdana, sans-serif; }
   h1 a {
-    color: black; }
+    color: #262626; }
     h1 a:visited {
-      color: black; }
+      color: #262626; }
 
 h3, h4, h5 {
   margin: 1.5em 0 0.8em 0; }
@@ -30,13 +31,13 @@ p {
   margin: 1em 0; }
 
 a {
-  color: #0000aa;
+  color: #91bf54;
   text-decoration: none; }
   a:hover {
-    color: black;
+    color: #91bf54;
     text-decoration: underline; }
   a:visited {
-    color: #aa00aa; }
+    color: #91bf54; }
   a img {
     border: 0; }
 

@@ -1,4 +1,7 @@
 markdown: rdiscount
+rdiscount:
+  extensions: [smart]
+
 pygments: true
 permalink: pretty
 

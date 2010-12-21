@@ -1,4 +1,16 @@
-/* Common */
+/* Colors */
+$dark_gray: rgb(38,38,38);
+$green: rgb(145,191,84);
+$light_green: rgb(240,255,200);
+$white: rgb(255,255,255);
+$yellow: rgb(252,254,215);
+
+$text_c: $dark_gray;
+$bg_c: $white;
+$em: $yellow;
+$bg_outer_c: $dark_gray; 
+$a_c: $green;
+$a_hover_c: $green;
 
 /* Global reset */
 * {
@@ -6,23 +18,25 @@
   padding: 0; }
 
 body {
-  background-color: white;
-  font: 13.34px Georgia, helvetica, arial, clean, sans-serif;
+  background-color: $bg_c;
+  font: 1em 'Vollkorn', "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
   text-align: center;
   padding: 40px 20px 0 20px; }
+
+em {
+	padding: 0 0.2 em;
+	background-color: $em;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%; }
 
 h1 {
-  line-height: 110%;
-  font-size: 35px;
-  font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
-  margin-bottom: 20px;
+  font: italic normal normal 2em/1.0em 'Vollkorn', "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
   a {
-    color: black;
+    color: $text_c;
     &:visited {
-      color: black; }}}
+      color: $text_c; }}}
 
 h3, h4, h5 {
   margin: 1.5em 0 0.8em 0; }
@@ -31,13 +45,13 @@ p {
   margin: 1em 0; }
 
 a {
-  color: #0000aa;
+  color: $a_c;
   text-decoration: none;
   &:hover {
-    color: black;
+    color: $a_c;
     text-decoration: underline; }
   &:visited {
-    color: #aa00aa; }
+    color: $a_c; }
   img {
     border: 0; } }
 
