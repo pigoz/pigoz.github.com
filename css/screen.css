@@ -1,4 +1,13 @@
 /* Colors */
+@font-face {
+  font-family: ProximaNova;
+  src: url("/fonts/ProximaNova-Regular.otf"); }
+
+@font-face {
+  font-family: ProximaNova;
+  font-weight: bold;
+  src: url("/fonts/ProximaNova-Bold.otf"); }
+
 /* Global reset */
 * {
   margin: 0;
@@ -6,7 +15,7 @@
 
 body {
   background-color: white;
-  font: 1em 'Vollkorn', "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+  font: 1em ProximaNova, "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
   text-align: center;
   padding: 40px 20px 0 20px; }
 
@@ -18,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 100%; }
 
 h1 {
-  font: italic normal normal 2em/1em "Vollkorn", "Lucida Grande", "Trebuchet MS", Verdana, sans-serif; }
+  font: bold normal normal 2em/1em ProximaNova, "Lucida Grande", "Trebuchet MS", Verdana, sans-serif; }
   h1 a {
     color: #262626; }
     h1 a:visited {
@@ -29,6 +38,9 @@ h3, h4, h5 {
 
 p {
   margin: 1em 0; }
+
+li {
+  margin-left: 2em; }
 
 a {
   color: #91bf54;
@@ -114,15 +126,14 @@ ol#tag-cloud {
     margin-right: 1em;
     margin-bottom: 45px; }
     #site #sidebar #title {
-      color: #daa520;
       font-weight: bold;
       margin-bottom: 10px;
       font-size: 16px;
       text-align: center; }
       #site #sidebar #title a {
-        color: #daa520; }
+        color: #91bf54; }
         #site #sidebar #title a:hover {
-          color: black; }
+          color: #262626; }
     #site #sidebar #github, #site #sidebar #tweets {
       margin-top: 45px; }
     #site #sidebar #github {
@@ -167,11 +178,21 @@ ol#tag-cloud {
   .post h1 {
     margin-bottom: 0; }
   .post .subtitle {
-    color: #bbbbbb;
+    color: #777777;
     margin-top: 0;
-    font-size: 13px; }
+    font-size: 0.7em; }
     .post .subtitle a {
       color: #777777; }
+  .post .tag-list {
+    padding-left: 2px; }
+  .post .tag-list a {
+    padding: 2px 4px;
+    background: #262626;
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px; }
   .post .center {
     text-align: center; }
   .post img.bordered {
@@ -185,7 +206,7 @@ ol#tag-cloud {
     .post .updated h5 {
       margin: 6px 0; }
   .post pre, .post code {
-    font: 12px Monaco, sans-serif; }
+    font: 12px BitstreamVeraSansMono, Monaco, Consolas, sans-serif; }
   .post pre {
     background-color: #eeeeff;
     border: 1px solid #dddddd;

@@ -1,12 +1,7 @@
 ---
 layout: default
-title: sp` blog
 ---
 
 {% for post in site.posts limit:5 %}
-<div class="post">
-<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-<p class="subtitle">{{ post.date | date: "%B %d, %Y" }}, tags: {{ post.tags | join: ", " }}</p>
-<p>{{ post.content }}</p>
-</div>
+{% include post-partial.html %}
 {% endfor %}

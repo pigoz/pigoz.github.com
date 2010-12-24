@@ -12,6 +12,17 @@ $bg_outer_c: $dark_gray;
 $a_c: $green;
 $a_hover_c: $green;
 
+@font-face {
+	font-family: ProximaNova;
+	src: url('/fonts/ProximaNova-Regular.otf');
+}
+
+@font-face {
+	font-family: ProximaNova;
+	font-weight: bold;
+	src: url('/fonts/ProximaNova-Bold.otf');
+}
+
 /* Global reset */
 * {
   margin: 0;
@@ -19,7 +30,7 @@ $a_hover_c: $green;
 
 body {
   background-color: $bg_c;
-  font: 1em 'Vollkorn', "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+  font: 1em ProximaNova, "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
   text-align: center;
   padding: 40px 20px 0 20px; }
 
@@ -32,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 100%; }
 
 h1 {
-  font: italic normal normal 2em/1.0em 'Vollkorn', "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+  font: bold normal normal 2em/1.0em ProximaNova, "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
   a {
     color: $text_c;
     &:visited {
@@ -43,6 +54,9 @@ h3, h4, h5 {
 
 p {
   margin: 1em 0; }
+
+li {
+	margin-left: 2em; }
 
 a {
   color: $a_c;
@@ -130,15 +144,14 @@ ol#tag-cloud {
     margin-right: 1em;
     margin-bottom: 45px;
     #title {
-      color: #daa520;
       font-weight: bold;
       margin-bottom: 10px;
       font-size: 16px;
       text-align: center;
       a {
-        color: #daa520;
+        color: $a_c;
         &:hover {
-          color: black; } } }
+          color: $text_c; } } }
     #github, #tweets {
       margin-top: 45px; }
     #github {
@@ -185,11 +198,23 @@ ol#tag-cloud {
   h1 {
     margin-bottom: 0; }
   .subtitle {
-    color: #bbbbbb;
+    color: #777777;
     margin-top: 0;
-    font-size: 13px;
+    font-size: 0.7em;
     a {
       color: #777777; } }
+  .tag-list {
+    padding-left: 2px;
+  }
+  .tag-list a {
+    padding: 2px 4px;
+    background: $text_c;
+    text-decoration: none;
+    color: $bg_c;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px }
+
   .center {
     text-align: center; }
   img.bordered {
@@ -204,7 +229,7 @@ ol#tag-cloud {
       margin: 6px 0; } }
   /* standard */
   pre, code {
-    font: 12px Monaco, sans-serif; }
+    font: 12px BitstreamVeraSansMono, Monaco, Consolas, sans-serif; }
   pre {
     background-color: #eeeeff;
     border: 1px solid #dddddd;
