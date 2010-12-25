@@ -10,4 +10,9 @@
 		{% endfor %}
 	</p>
 	<p>{% if content %}{{ content }}{% else %}{{ post.content }}{% endif %}</p>
+	{% if content %}
+	<div id="disqus_thread"></div>
+	<script type="text/javascript" src="http://disqus.com/forums/12dimensions/embed.js"></script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	{% endif %}
 </div>

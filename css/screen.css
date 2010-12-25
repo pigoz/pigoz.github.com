@@ -9,15 +9,18 @@
   src: url("/fonts/ProximaNova-Bold.otf"); }
 
 /* Global reset */
-* {
+html, body, * {
   margin: 0;
   padding: 0; }
 
 body {
+  background-image: url("/images/bg.png");
+  background-repeat: repeat-y;
+  background-position: 50% 50%;
   background-color: white;
   font: 1em ProximaNova, "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
   text-align: center;
-  padding: 40px 20px 0 20px; }
+  height: 100%; }
 
 em {
   padding: 0 0.2 em;
@@ -43,13 +46,13 @@ li {
   margin-left: 2em; }
 
 a {
-  color: #91bf54;
+  color: #cc0000;
   text-decoration: none; }
   a:hover {
-    color: #91bf54;
+    color: #cc0000;
     text-decoration: underline; }
   a:visited {
-    color: #91bf54; }
+    color: #cc0000; }
   a img {
     border: 0; }
 
@@ -118,12 +121,13 @@ ol#tag-cloud {
   font-size: 100%;
   text-align: left;
   line-height: 1.5em;
-  width: 900px;
-  margin: 0 auto 2em auto; }
+  width: 920px;
+  margin: 0 auto 0 auto; }
   #site #sidebar {
+    background: #f0f0f0;
     float: right;
-    width: 260px;
-    margin-right: 1em;
+    width: 270px;
+    padding: 0 5px 0 5px;
     margin-bottom: 45px; }
     #site #sidebar #title {
       font-weight: bold;
@@ -131,7 +135,7 @@ ol#tag-cloud {
       font-size: 16px;
       text-align: center; }
       #site #sidebar #title a {
-        color: #91bf54; }
+        color: #cc0000; }
         #site #sidebar #title a:hover {
           color: #262626; }
     #site #sidebar #github, #site #sidebar #tweets {
@@ -156,6 +160,7 @@ ol#tag-cloud {
         display: block;
         margin: 5px 0 -15px 0; }
   #site #content {
+    padding-top: 2em;
     width: 550px;
     margin-left: 1em; }
   #site #footer {
@@ -206,12 +211,14 @@ ol#tag-cloud {
     .post .updated h5 {
       margin: 6px 0; }
   .post pre, .post code {
-    font: 12px BitstreamVeraSansMono, Monaco, Consolas, sans-serif; }
+    font-size: 12px;
+    font-family: Consolas;
+    /*	Bitstream Vera Sans Mono,Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Courier New,monospace,serif;*/ }
   .post pre {
     background-color: #eeeeff;
     border: 1px solid #dddddd;
     padding: 0.4em;
-    margin: 20px 10px;
+    margin: 20px 0px 20px 9px;
     overflow-x: auto;
     /* css-3 */
     white-space: pre-wrap;
@@ -228,7 +235,6 @@ ol#tag-cloud {
   .post code {
     border: 1px solid #dddddd;
     background-color: #eeeeff;
-    font-size: 95%;
     padding: 0 0.2em; }
     .post code.kb {
       border-width: 2px;

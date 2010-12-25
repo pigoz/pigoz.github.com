@@ -15,10 +15,8 @@ In the interface define an outlet that you will bind to the NSScrollView contain
 
 {% highlight objc %}
 @interface PGZWindow : NSWindow {
-
 	IBOutlet NSScrollView * scrollView;
 	NSPoint pos;
-
 }
 
 @property (retain) IBOutlet NSScrollView * scrollView;
@@ -34,21 +32,18 @@ In the implementation you just store the position before the resize, and set it 
 @implementation PGZWindow
 @synthesize scrollView;
 
-- (void) awakeFromNib
-{
+- (void) awakeFromNib { 
 	[self setDelegate:self];
 }
 
-- (NSSize)windowWillResize:(NSWindow *) window toSize:(NSSize)newSize
-{
+- (NSSize)windowWillResize:(NSWindow *) window toSize:(NSSize)newSize {
 	NSPoint new_pos = [[scrollView contentView] bounds].origin;
 	if(new_pos.x > 0.0 || new_pos.y > 0.0){
 		self->pos = new_pos;
 	}
 }
 
-- (void)windowDidResize:(NSNotification *)notification
-{
+- (void)windowDidResize:(NSNotification *)notification {
 	NSPoint new_pos = [[scrollView contentView] bounds].origin;
 	if(new_pos.x > 0.0 || new_pos.y > 0.0){
 		self->pos = new_pos;

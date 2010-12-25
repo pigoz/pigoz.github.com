@@ -1,7 +1,7 @@
 /* Colors */
 $dark_gray: rgb(38,38,38);
 $green: rgb(145,191,84);
-$light_green: rgb(240,255,200);
+$green: rgb(204,0,0);
 $white: rgb(255,255,255);
 $yellow: rgb(252,254,215);
 
@@ -11,6 +11,7 @@ $em: $yellow;
 $bg_outer_c: $dark_gray; 
 $a_c: $green;
 $a_hover_c: $green;
+$alt_bg: rgb(240,240,240);
 
 @font-face {
 	font-family: ProximaNova;
@@ -23,16 +24,25 @@ $a_hover_c: $green;
 	src: url('/fonts/ProximaNova-Bold.otf');
 }
 
+@font-face {
+	font-family: ConsolasCSS;
+	src: url('/fonts/Consolas.ttf');
+}
+
 /* Global reset */
-* {
+html, body, * {
   margin: 0;
   padding: 0; }
 
 body {
+  background-image: url('/images/bg.png');
+  background-repeat: repeat-y;
+  background-position: 50% 50%;
   background-color: $bg_c;
   font: 1em ProximaNova, "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
   text-align: center;
-  padding: 40px 20px 0 20px; }
+  height: 100%;
+}
 
 em {
 	padding: 0 0.2 em;
@@ -136,12 +146,13 @@ ol#tag-cloud {
   font-size: 100%;
   text-align: left;
   line-height: 1.5em;
-  width: 900px;
-  margin: 0 auto 2em auto;
+  width: 920px;
+  margin: 0 auto 0 auto;
   #sidebar {
+	background: $alt_bg;
     float: right;
-    width: 260px;
-    margin-right: 1em;
+    width: 270px;
+	padding: 0 5px 0 5px;
     margin-bottom: 45px;
     #title {
       font-weight: bold;
@@ -175,6 +186,7 @@ ol#tag-cloud {
           display: block;
           margin: 5px 0 -15px 0; } } } }
   #content {
+	padding-top: 2em;
     width: 550px;
     margin-left: 1em; }
   #footer {
@@ -229,12 +241,14 @@ ol#tag-cloud {
       margin: 6px 0; } }
   /* standard */
   pre, code {
-    font: 12px BitstreamVeraSansMono, Monaco, Consolas, sans-serif; }
+	font-size: 12px;
+	font-family: Consolas, ConsolasCSS;
+  }
   pre {
     background-color: #eeeeff;
     border: 1px solid #dddddd;
     padding: 0.4em;
-    margin: 20px 10px;
+    margin: 20px 0px 20px 9px;
     overflow-x: auto;
     /* css-3 */
     white-space: pre-wrap;
@@ -251,7 +265,6 @@ ol#tag-cloud {
   code {
     border: 1px solid #dddddd;
     background-color: #eeeeff;
-    font-size: 95%;
     padding: 0 0.2em;
     &.kb {
       border-width: 2px;
