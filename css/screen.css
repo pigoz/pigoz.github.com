@@ -8,6 +8,10 @@
   font-weight: bold;
   src: url("/fonts/ProximaNova-Bold.otf"); }
 
+@font-face {
+  font-family: ConsolasCSS;
+  src: url("/fonts/Consolas.ttf"); }
+
 /* Global reset */
 html, body, * {
   margin: 0;
@@ -212,8 +216,7 @@ ol#tag-cloud {
       margin: 6px 0; }
   .post pre, .post code {
     font-size: 12px;
-    font-family: Consolas;
-    /*	Bitstream Vera Sans Mono,Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Courier New,monospace,serif;*/ }
+    font-family: Consolas, ConsolasCSS; }
   .post pre {
     background-color: #eeeeff;
     border: 1px solid #dddddd;
