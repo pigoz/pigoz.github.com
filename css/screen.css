@@ -12,7 +12,6 @@
   font-family: ConsolasCSS;
   src: url("/fonts/Consolas.ttf"); }
 
-/* Global reset */
 html, body, * {
   margin: 0;
   padding: 0; }
@@ -101,7 +100,7 @@ ul.posts {
     font-size: 100%; }
 
 ol#tag-cloud {
-  margin-bottom: 35px; }
+  margin: 25px 0; }
   ol#tag-cloud li {
     display: inline;
     line-height: 150%; }
@@ -119,6 +118,13 @@ ol#tag-cloud {
       font-size: 135%; }
     ol#tag-cloud li.tier-6 {
       font-size: 150%; }
+
+input.textfield {
+  -moz-border-radius: 3px 3px 3px 3px;
+  background: url("/images/inputshadow.gif") no-repeat scroll left top white;
+  border: 1px solid #999999;
+  padding: 2px 3px;
+  margin: auto 0; }
 
 /* Site */
 #site {
@@ -142,6 +148,11 @@ ol#tag-cloud {
         color: #cc0000; }
         #site #sidebar #title a:hover {
           color: #262626; }
+    #site #sidebar form#google-search #goog_it {
+      background: url("/images/google.png") no-repeat scroll left top white;
+      width: 20px;
+      height: 20px;
+      border: 0; }
     #site #sidebar #github, #site #sidebar #tweets {
       margin-top: 45px; }
     #site #sidebar #github {

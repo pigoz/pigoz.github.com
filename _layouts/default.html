@@ -18,10 +18,10 @@
 				<p>
 					A blog by <a href="/about">Stefano Pigozzi</a> mostly on <a href="/tags/ruby">Ruby</a>, <a href="/tags/macosx">Mac OSX</a> and <a href="/tags/manga">manga</a>.
 				</p>
-				<form action="http://www.google.com/search" method="get" accept-charset="utf-8">
-					<input type="text" name="q" value="">
+				<form id="google-search" action="http://www.google.com/search" method="get" accept-charset="utf-8">
 					<input type="hidden" name="sitesearch" value="stefanopigozzi.com">
-					<input type="submit" value="Google!">
+					<div><input type="text" class="textfield" name="q" value="">
+					<input type="submit" id="goog_it" value=" "></div>
 				</form>
 				{% include tag-cloud.html %}
 			</div>
