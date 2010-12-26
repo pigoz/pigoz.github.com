@@ -14,19 +14,19 @@ $a_hover_c: $green;
 $alt_bg: rgb(240,240,240);
 
 @font-face {
-	font-family: ProximaNova;
-	src: url('/fonts/ProximaNova-Regular.otf');
+  font-family: ProximaNova;
+  src: url('/fonts/ProximaNova-Regular.otf');
 }
 
 @font-face {
-	font-family: ProximaNova;
-	font-weight: bold;
-	src: url('/fonts/ProximaNova-Bold.otf');
+  font-family: ProximaNova;
+  font-weight: bold;
+  src: url('/fonts/ProximaNova-Bold.otf');
 }
 
 @font-face {
-	font-family: ConsolasCSS;
-	src: url('/fonts/Consolas.ttf');
+  font-family: ConsolasCSS;
+  src: url('/fonts/Consolas.ttf');
 }
 
 html, body, * {
@@ -65,7 +65,7 @@ p {
   margin: 1em 0; }
 
 li {
-	margin-left: 2em; }
+  margin-left: 2em; }
 
 a {
   color: $a_c;
@@ -140,11 +140,11 @@ ol#tag-cloud {
       font-size: 150%; } } }
 
 input.textfield {
-	-moz-border-radius:3px 3px 3px 3px;
-	background:url("/images/inputshadow.gif") no-repeat scroll left top #FFFFFF;
-	border:1px solid #999999;
-	padding: 2px 3px;
-	margin: auto 0;
+  -moz-border-radius:3px 3px 3px 3px;
+  background:url("/images/inputshadow.gif") no-repeat scroll left top #FFFFFF;
+  border:1px solid #999999;
+  padding: 2px 3px;
+  margin: auto 0;
 }
 
 /* Site */
@@ -156,10 +156,10 @@ input.textfield {
   width: 920px;
   margin: 0 auto 0 auto;
   #sidebar {
-	background: $alt_bg;
+    background: $alt_bg;
     float: right;
     width: 270px;
-	padding: 0 5px 0 5px;
+    padding: 0 5px 0 5px;
     margin-bottom: 45px;
     #title {
       font-weight: bold;
@@ -170,12 +170,11 @@ input.textfield {
         color: $a_c;
         &:hover {
           color: $text_c; } } }
-	form#google-search #goog_it{
-		background:url("/images/google.png") no-repeat scroll left top #FFFFFF;
-		width: 20px;
-		height: 20px;
-		border: 0;
-	}
+    form#google-search #goog_it{
+      background:url("/images/google.png") no-repeat scroll left top #FFFFFF;
+      width: 20px;
+      height: 20px;
+      border: 0; }
     #github, #tweets {
       margin-top: 45px; }
     #github {
@@ -199,7 +198,7 @@ input.textfield {
           display: block;
           margin: 5px 0 -15px 0; } } } }
   #content {
-	padding-top: 2em;
+    padding-top: 2em;
     width: 550px;
     margin-left: 1em; }
   #footer {
@@ -219,7 +218,8 @@ input.textfield {
 /* Posts */
 
 .post {
-	margin-bottom: 4em;
+  position: relative;
+  margin-bottom: 4em;
   h1 {
     margin-bottom: 0; }
   .subtitle {
@@ -240,6 +240,46 @@ input.textfield {
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px }
 
+  .date {
+    position: absolute;
+    left: -70px;
+    top: 0px;
+    width: 50px;
+    text-align: center;
+      .day {
+        -moz-border-radius-topleft:5px;
+        -moz-border-radius-topright:5px;
+        background-color: $text_c;
+        color: $bg_c;
+        overflow:hidden;
+        padding: 0.2em 0;
+        font-size: 1.2em;
+/*        padding:7px 0;*/
+       }
+       .month {
+         border-left:1px solid $text_c;
+         border-right:1px solid $text_c;
+         background-color: $bg_c;
+         color: $text_c;
+         padding: 0.2em 0 0.1em 0;
+         font-size: 0.8em;
+         overflow:hidden;
+         font-size: 0.8em;
+         line-height: 0.9em;}
+       .year {
+         -moz-border-radius-bottomleft:5px;
+         -moz-border-radius-bottomright:5px;
+         border-bottom:1px solid $text_c;
+         border-left:1px solid $text_c;
+         border-right:1px solid $text_c;
+         background-color: $bg_c;
+         color: $text_c;
+         padding: 0 0 0.2em 0;
+         font-size: 0.8em;
+         overflow:hidden;
+         font-size: 0.8em;
+         line-height: 0.9em;}
+  }
   .center {
     text-align: center; }
   img.bordered {

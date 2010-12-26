@@ -192,6 +192,7 @@ input.textfield {
 
 /* Posts */
 .post {
+  position: relative;
   margin-bottom: 4em;
   /* standard */
   /* terminal */ }
@@ -213,6 +214,44 @@ input.textfield {
     border-radius: 4px;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px; }
+  .post .date {
+    position: absolute;
+    left: -70px;
+    top: 0px;
+    width: 50px;
+    text-align: center; }
+    .post .date .day {
+      -moz-border-radius-topleft: 5px;
+      -moz-border-radius-topright: 5px;
+      background-color: #262626;
+      color: white;
+      overflow: hidden;
+      padding: 0.2em 0;
+      font-size: 1.2em;
+      /*        padding:7px 0;*/ }
+    .post .date .month {
+      border-left: 1px solid #262626;
+      border-right: 1px solid #262626;
+      background-color: white;
+      color: #262626;
+      padding: 0.2em 0 0.1em 0;
+      font-size: 0.8em;
+      overflow: hidden;
+      font-size: 0.8em;
+      line-height: 0.9em; }
+    .post .date .year {
+      -moz-border-radius-bottomleft: 5px;
+      -moz-border-radius-bottomright: 5px;
+      border-bottom: 1px solid #262626;
+      border-left: 1px solid #262626;
+      border-right: 1px solid #262626;
+      background-color: white;
+      color: #262626;
+      padding: 0 0 0.2em 0;
+      font-size: 0.8em;
+      overflow: hidden;
+      font-size: 0.8em;
+      line-height: 0.9em; }
   .post .center {
     text-align: center; }
   .post img.bordered {
