@@ -13,8 +13,21 @@ module Helpers
     sh "rsync -rtz --delete _site/ pigoz.fastsh.it:~/www/#{domain}/"
   end
   
+  def tag_page(tag, posts)
+    eval ["%{", File.read("./lib/tag.html"), "}"].join(),
+         binding, __FILE__, __LINE__
+  end
+  
+  def tags_url()
+    '/tags/'
+  end
+  
+  def tag_url(tag)
+    [tags_url, tag].join()
+  end
+  
   def tag_link(tag)
-    %[<a href="/tags/#{tag}">#{tag}</a>]
+    %[<a href="#{tag_url(tag)}">#{tag}</a>]
   end
   
   def tag_cloud(tags, from=1, unto=6)
