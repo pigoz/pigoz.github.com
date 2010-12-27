@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Monkeypatch scroll to top when resizing an NSCollectionView
-tags: cocoa macosx jekyll
+author: Stefano Pigozzi
+date: 2009-02-06
+tags: cocoa macosx
 ---
 
 As you know Leopard has this new amazing facility to present complex data on screen. NSCollectionView allows you to lay out some NSViews each representing your data, whereas NSTableView supports only NSCells out of the box.

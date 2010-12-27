@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Blog moved to jekyll and github!
+author: Stefano Pigozzi
+date: 2010-12-09
 tags: blog jekyll
 ---
  
