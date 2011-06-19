@@ -17,6 +17,8 @@ $text-shadow: #333;
 @import "partials/tagcloud";
 @import "partials/syntax";
 
+html, body, #container { height: 100%; }
+
 body {
   font: 1em 'Droid Sans', Verdana, Arial, sans-serif;
   color: #444;
@@ -38,6 +40,7 @@ body {
   }
 
   #container {
+    height: auto; min-height: 100%;
     @include grid-container;
     #header {
       @include grid(12);
@@ -174,4 +177,14 @@ img.rss {
   margin-top: 4px;
   vertical-align: middle;
   float: right;
+}
+
+#footer {
+  font-size: 60%;
+  text-align: center;
+
+  position: relative;
+  margin-top: -2em; /* negative value of footer height */
+  height: 2em;
+  clear: both;
 }

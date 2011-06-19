@@ -500,32 +500,39 @@ code {
 
 /* Literal.Number.Integer.Long */
 /* line 20, ../sass/partials/_application.scss */
+html, body, #container {
+  height: 100%;
+}
+
+/* line 22, ../sass/partials/_application.scss */
 body {
   font: 1em 'Droid Sans', Verdana, Arial, sans-serif;
   color: #444;
   background-color: #f4f4f4;
   background: #f4f4f4 url("/images/top-bg.png") repeat-x fixed top;
 }
-/* line 26, ../sass/partials/_application.scss */
+/* line 28, ../sass/partials/_application.scss */
 body p {
   margin-bottom: 0.7em;
 }
-/* line 31, ../sass/partials/_application.scss */
+/* line 33, ../sass/partials/_application.scss */
 body a:link, body a:visited, body a:active {
   color: #d71300;
   text-decoration: none;
 }
-/* line 35, ../sass/partials/_application.scss */
+/* line 37, ../sass/partials/_application.scss */
 body a:hover {
   text-decoration: underline;
 }
-/* line 40, ../sass/partials/_application.scss */
+/* line 42, ../sass/partials/_application.scss */
 body #container {
+  height: auto;
+  min-height: 100%;
   margin-left: auto;
   margin-right: auto;
   width: 960px;
 }
-/* line 42, ../sass/partials/_application.scss */
+/* line 45, ../sass/partials/_application.scss */
 body #container #header {
   display: inline;
   float: left;
@@ -537,16 +544,16 @@ body #container #header {
   font-weight: bold;
   text-shadow: #333333 1px 2px 0px;
 }
-/* line 52, ../sass/partials/_application.scss */
+/* line 55, ../sass/partials/_application.scss */
 body #container #header .inner {
   padding: 0.3em 0.5em;
 }
-/* line 55, ../sass/partials/_application.scss */
+/* line 58, ../sass/partials/_application.scss */
 body #container #header img {
   vertical-align: middle;
   margin-right: 0.5em;
 }
-/* line 61, ../sass/partials/_application.scss */
+/* line 64, ../sass/partials/_application.scss */
 body #container #content {
   font-size: 83%;
   display: inline;
@@ -557,7 +564,7 @@ body #container #content {
   margin-left: 0;
 }
 
-/* line 69, ../sass/partials/_application.scss */
+/* line 72, ../sass/partials/_application.scss */
 .bio {
   display: inline;
   float: left;
@@ -579,7 +586,7 @@ body #container #content {
   padding: 0.5em 1em;
 }
 
-/* line 74, ../sass/partials/_application.scss */
+/* line 77, ../sass/partials/_application.scss */
 .posts {
   display: inline;
   float: left;
@@ -611,13 +618,13 @@ body #container #content {
 .posts .inner {
   padding: 0.5em 1em;
 }
-/* line 82, ../sass/partials/_application.scss */
+/* line 85, ../sass/partials/_application.scss */
 .posts h1 {
   font-size: 83%;
   margin: 0;
 }
 
-/* line 87, ../sass/partials/_application.scss */
+/* line 90, ../sass/partials/_application.scss */
 .post-listing {
   display: inline;
   float: left;
@@ -638,7 +645,7 @@ body #container #content {
 .post-listing .inner {
   padding: 0.5em 1em;
 }
-/* line 92, ../sass/partials/_application.scss */
+/* line 95, ../sass/partials/_application.scss */
 .post-listing .tag-list {
   float: right;
 }
@@ -666,12 +673,12 @@ body #container #content {
   padding: 2px 4px;
   text-decoration: none;
 }
-/* line 97, ../sass/partials/_application.scss */
+/* line 100, ../sass/partials/_application.scss */
 .post-listing .title .date {
   margin: 0 1.5em 0 0;
 }
 
-/* line 102, ../sass/partials/_application.scss */
+/* line 105, ../sass/partials/_application.scss */
 .post {
   display: inline;
   float: left;
@@ -716,17 +723,17 @@ body #container #content {
   padding: 2px 4px;
   text-decoration: none;
 }
-/* line 111, ../sass/partials/_application.scss */
+/* line 114, ../sass/partials/_application.scss */
 .post p.subtitle {
   margin-bottom: 25px;
 }
-/* line 115, ../sass/partials/_application.scss */
+/* line 118, ../sass/partials/_application.scss */
 .post .date {
   float: right;
   text-align: center;
   width: 50px;
 }
-/* line 119, ../sass/partials/_application.scss */
+/* line 122, ../sass/partials/_application.scss */
 .post .date .day {
   -moz-border-radius-topleft: 5px;
   -webkit-border-top-left-radius: 5px;
@@ -744,7 +751,7 @@ body #container #content {
   overflow: hidden;
   font-size: 1.8em;
 }
-/* line 125, ../sass/partials/_application.scss */
+/* line 128, ../sass/partials/_application.scss */
 .post .date .month {
   overflow: hidden;
   font-size: 1.0em;
@@ -753,7 +760,7 @@ body #container #content {
   padding: 0.2em 0 0.1em 0;
   line-height: 0.9em;
 }
-/* line 133, ../sass/partials/_application.scss */
+/* line 136, ../sass/partials/_application.scss */
 .post .date .year {
   -moz-border-radius-bottomleft: 5px;
   -webkit-border-bottom-left-radius: 5px;
@@ -775,7 +782,7 @@ body #container #content {
   line-height: 0.9em;
 }
 
-/* line 145, ../sass/partials/_application.scss */
+/* line 148, ../sass/partials/_application.scss */
 #sidebar {
   display: inline;
   float: left;
@@ -798,16 +805,16 @@ body #container #content {
 #sidebar .inner {
   padding: 0.5em 1em;
 }
-/* line 151, ../sass/partials/_application.scss */
+/* line 154, ../sass/partials/_application.scss */
 #sidebar h1 {
   margin-top: 35px;
 }
-/* line 153, ../sass/partials/_application.scss */
+/* line 156, ../sass/partials/_application.scss */
 #sidebar h1:first-child {
   margin-top: 0;
 }
 
-/* line 159, ../sass/partials/_application.scss */
+/* line 162, ../sass/partials/_application.scss */
 input.textfield {
   background: url("/images/inputshadow.gif") no-repeat scroll left top white;
   border: 1px solid #999999;
@@ -815,7 +822,7 @@ input.textfield {
   margin: auto 0;
 }
 
-/* line 166, ../sass/partials/_application.scss */
+/* line 169, ../sass/partials/_application.scss */
 form#google-search #goog_it {
   background: url("/images/google.png") no-repeat scroll left top white;
   width: 20px;
@@ -823,9 +830,20 @@ form#google-search #goog_it {
   border: 0;
 }
 
-/* line 173, ../sass/partials/_application.scss */
+/* line 176, ../sass/partials/_application.scss */
 img.rss {
   margin-top: 4px;
   vertical-align: middle;
   float: right;
+}
+
+/* line 182, ../sass/partials/_application.scss */
+#footer {
+  font-size: 60%;
+  text-align: center;
+  position: relative;
+  margin-top: -2em;
+  /* negative value of footer height */
+  height: 2em;
+  clear: both;
 }
