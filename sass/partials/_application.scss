@@ -31,7 +31,8 @@ body {
 
   a {
     &:link, &:visited, &:active {
-      color: $header-bg-dark;
+      //color: $header-bg-dark;
+      color: #0187C5;
       text-decoration: none;
     }
     &:hover {
@@ -46,7 +47,7 @@ body {
       @include grid(12);
       @include omega;
       //@include pgz-header;
-      margin: 2px 0;
+      margin: 2px 0 2.2em 0;
       font-weight: bold;
       @include single-text-shadow($text-shadow, 1px, 2px, 0px);
 
@@ -77,13 +78,13 @@ body {
 .posts {
   @include grid(9);
   @include pgz-area;
-  @include pgz-header;
+  //@include pgz-header;
   @include pgz-padded;
-  @include single-text-shadow($text-shadow, 1px, 1px, 1px);
-  border-top: 1px solid $header-border-light;
-  border-bottom: 1px solid $header-border-dark;
+  //@include single-text-shadow($text-shadow, 1px, 1px, 1px);
+  //border-top: 1px solid $header-border-light;
+  //border-bottom: 1px solid $header-border-dark;
   h1 {
-    @include pgz-smallfont;
+    //@include pgz-smallfont;
     margin: 0;
   }
 }

@@ -27,6 +27,16 @@
 
     <div id="sidebar">
       <div class="inner">
+        <h1>search</h1>
+        <form id="google-search" action="http://www.google.com/search" method="get" accept-charset="utf-8">
+          <input type="hidden" name="sitesearch" value="12dimensions.com">
+          <div><input type="text" class="textfield" name="q" value="">
+            <input type="submit" id="goog_it" value=" "></div>
+        </form>
+
+        <h1>tag cloud</h1>
+        {% include tag-cloud.html %}
+
         <h1>get in touch</h1>
         <a href="mailto:stefano.pigozzi@gmail.com">
           <img src="/images/icons/email_32.png" />
@@ -43,16 +53,6 @@
         <a href="http://www.facebook.com/stefano.pigozzi">
           <img src="/images/icons/facebook_32.png" />
         </a>
-
-        <h1>search</h1>
-        <form id="google-search" action="http://www.google.com/search" method="get" accept-charset="utf-8">
-          <input type="hidden" name="sitesearch" value="12dimensions.com">
-          <div><input type="text" class="textfield" name="q" value="">
-            <input type="submit" id="goog_it" value=" "></div>
-        </form>
-
-        <h1>tag cloud</h1>
-        {% include tag-cloud.html %}
 
       </div>
     </div>
