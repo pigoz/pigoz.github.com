@@ -18,8 +18,6 @@ $text-shadow: #333;
 @import "partials/tagcloud";
 @import "partials/syntax";
 
-html, body, #container { height: 100%; }
-
 body {
   font: 1em 'Droid Sans', Verdana, Arial, sans-serif;
   line-height: 1.4em;
@@ -172,13 +170,26 @@ img.rss {
   float: right;
 }
 
+// footer with sticky footer hack
+html, body, #wrapper { height: 100%; }
+body > #wrapper { height: auto; min-height: 100%; }
+#container { overflow: auto; padding-bottom: 2em; } 
+
 #footer {
   font-size: 60%;
   text-align: center;
 
   position: relative;
   margin-top: -2em; /* negative value of footer height */
-  height: 4em;
-  padding-top: 2em;
+  height: 2em;
   clear: both;
+}
+
+/* Opera Fix */
+body:before { /* thanks to Maleika (Kohoutec)*/
+    content: "";
+    height:100%;
+    float: left;
+    width: 0;
+    margin-top: -32767px; /* thank you Erik J */
 }

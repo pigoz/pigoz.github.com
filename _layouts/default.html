@@ -2,63 +2,65 @@
 	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
 <head>
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-	<title>{% if page.title %}{{page.title}} - {% endif %}12dimensions</title>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>{% if page.title %}{{page.title}} - {% endif %}12dimensions</title>
   <link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold&v1' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Inconsolata:regular,bold&v1' rel='stylesheet' type='text/css'>
   <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <link href="/css/print.css" media="print" rel="stylesheet" type="text/css" />
   <!--[if lt IE 8]>
-      <link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <![endif]-->
 </head>
 <body>
-  <div id="container">
+  <div id="wrapper">
+    <div id="container">
 
-    <div id="header">
-      <div class="inner">
-        <a href="/"><img src="/images/logo.png" /></a><a href="http://feeds.feedburner.com/12dimensionscom"><img class="rss" src="/images/icons/rss_32.png" /></a>
+      <div id="header">
+        <div class="inner">
+          <a href="/"><img src="/images/logo.png" /></a><a href="http://feeds.feedburner.com/12dimensionscom"><img class="rss" src="/images/icons/rss_32.png" /></a>
+        </div>
       </div>
-    </div>
 
-    <div id="content">
-      {{ content }}
-    </div>
+      <div id="content">
+        {{ content }}
+      </div>
 
-    <div id="sidebar">
-      <div class="inner">
-        <h1>search</h1>
-        <form id="google-search" action="http://www.google.com/search" method="get" accept-charset="utf-8">
-          <input type="hidden" name="sitesearch" value="12dimensions.com">
-          <div><input type="text" class="textfield" name="q" value="">
-            <input type="submit" id="goog_it" value=" "></div>
-        </form>
+      <div id="sidebar">
+        <div class="inner">
+          <h1>search</h1>
+          <form id="google-search" action="http://www.google.com/search" method="get" accept-charset="utf-8">
+            <input type="hidden" name="sitesearch" value="12dimensions.com">
+            <div><input type="text" class="textfield" name="q" value="">
+              <input type="submit" id="goog_it" value=" "></div>
+          </form>
 
-        <h1>tag cloud</h1>
-        {% include tag-cloud.html %}
+          <h1>tag cloud</h1>
+          {% include tag-cloud.html %}
 
-        <h1>get in touch</h1>
-        <a href="mailto:stefano.pigozzi@gmail.com">
-          <img src="/images/icons/email_32.png" />
-        </a>
-        <a href="http://twitter.com/pigoz">
-          <img src="/images/icons/twitter_32.png" />
-        </a>
-        <a href="http://github.com/pigoz">
-          <img src="/images/icons/github_32.png" />
-        </a>
-        <a href="http://linkedin.com/in/stefanopigozzi">
-          <img src="/images/icons/linkedin_32.png" />
-        </a>
-        <a href="http://www.facebook.com/stefano.pigozzi">
-          <img src="/images/icons/facebook_32.png" />
-        </a>
+          <h1>get in touch</h1>
+          <a href="mailto:stefano.pigozzi@gmail.com">
+            <img src="/images/icons/email_32.png" />
+          </a>
+          <a href="http://twitter.com/pigoz">
+            <img src="/images/icons/twitter_32.png" />
+          </a>
+          <a href="http://github.com/pigoz">
+            <img src="/images/icons/github_32.png" />
+          </a>
+          <a href="http://linkedin.com/in/stefanopigozzi">
+            <img src="/images/icons/linkedin_32.png" />
+          </a>
+          <a href="http://www.facebook.com/stefano.pigozzi">
+            <img src="/images/icons/facebook_32.png" />
+          </a>
 
+        </div>
       </div>
     </div>
   </div>
   <div id="footer">
     copyright ©2009-2011 - the code for this blog is available <a href="https://github.com/pigoz/pigoz.github.com">here</a> under the MIT license
-  </div> 
+  </div>
 </body>
 </html>
