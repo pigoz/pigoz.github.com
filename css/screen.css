@@ -1,329 +1,831 @@
-/* Colors */
-@font-face {
-  font-family: ProximaNova;
-  src: url("/fonts/ProximaNova-Regular.otf"); }
-
-@font-face {
-  font-family: ProximaNova;
-  font-weight: bold;
-  src: url("/fonts/ProximaNova-Bold.otf"); }
-
-@font-face {
-  font-family: ConsolasCSS;
-  src: url("/fonts/Consolas.ttf"); }
-
-html, body, * {
+/* line 17, ../../../../.rvm/gems/ruby-1.9.2-p180@railspre/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
+/* line 20, ../../../../.rvm/gems/ruby-1.9.2-p180@railspre/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 body {
-  background-image: url("/images/bg.png");
-  background-repeat: repeat-y;
-  background-position: 50% 50%;
-  background-color: white;
-  font: 1em ProximaNova, "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
-  text-align: center;
-  height: 100%; }
+  line-height: 1;
+}
 
-em {
-  padding: 0 0.2 em;
-  background-color: #fcfed7; }
+/* line 22, ../../../../.rvm/gems/ruby-1.9.2-p180@railspre/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
 
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%; }
-
-h1 {
-  font: bold normal normal 2em/1em ProximaNova, "Lucida Grande", "Trebuchet MS", Verdana, sans-serif; }
-  h1 a {
-    color: #262626; }
-    h1 a:visited {
-      color: #262626; }
-
-h3, h4, h5 {
-  margin: 1.5em 0 0.8em 0; }
-
-p {
-  margin: 1em 0; }
-
-li {
-  margin-left: 2em; }
-
-a {
-  color: #cc0000;
-  text-decoration: none; }
-  a:hover {
-    color: #cc0000;
-    text-decoration: underline; }
-  a:visited {
-    color: #cc0000; }
-  a img {
-    border: 0; }
-
+/* line 24, ../../../../.rvm/gems/ruby-1.9.2-p180@railspre/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
-  font-size: inherit;
-  font: 100%; }
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
-blockquote {
-  margin: 10px 20px;
-  font-style: italic; }
+/* line 26, ../../../../.rvm/gems/ruby-1.9.2-p180@railspre/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
 
-/* Lists */
-div.year {
-  margin-bottom: 60px; }
-  div.year:last-child {
-    margin-bottom: 0; }
-  div.year h2.year {
-    color: #888888;
-    float: left;
-    margin: 0.2em 0 0 -3em;
-    font-size: 250%; }
-  div.year h3.month, div.year h2.tag {
-    margin-top: 0; }
+/* line 28, ../../../../.rvm/gems/ruby-1.9.2-p180@railspre/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 101, ../../../../.rvm/gems/ruby-1.9.2-p180@railspre/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
 
-ul.posts {
-  list-style-type: none;
-  margin-bottom: 2em; }
-  ul.posts li {
-    line-height: 1.75em; }
-    ul.posts li strong.date {
-      color: #888888;
-      margin-right: 5px; }
-      .tag ul.posts li strong.date {
-        width: 6.5em;
-        display: inline-block;
-        text-align: right; }
+/* line 30, ../../../../.rvm/gems/ruby-1.9.2-p180@railspre/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
 
-#search {
-  margin: 25px 0; }
-  #search .text {
-    width: 180px;
-    font-size: 100%; }
+/* line 115, ../../../../.rvm/gems/ruby-1.9.2-p180@railspre/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
 
+/* line 1, ../sass/partials/_tagcloud.scss */
 ol#tag-cloud {
-  margin: 25px 0; }
-  ol#tag-cloud li {
-    display: inline;
-    line-height: 150%; }
-    ol#tag-cloud li a {
-      padding: 2px; }
-    ol#tag-cloud li.tier-1 {
-      font-size: 75%; }
-    ol#tag-cloud li.tier-2 {
-      font-size: 90%; }
-    ol#tag-cloud li.tier-3 {
-      font-size: 105%; }
-    ol#tag-cloud li.tier-4 {
-      font-size: 120%; }
-    ol#tag-cloud li.tier-5 {
-      font-size: 135%; }
-    ol#tag-cloud li.tier-6 {
-      font-size: 150%; }
+  margin: 0 0;
+}
+/* line 3, ../sass/partials/_tagcloud.scss */
+ol#tag-cloud li {
+  display: inline;
+  line-height: 150%;
+}
+/* line 6, ../sass/partials/_tagcloud.scss */
+ol#tag-cloud li a {
+  padding: 2px;
+}
+/* line 8, ../sass/partials/_tagcloud.scss */
+ol#tag-cloud li.tier-1 {
+  font-size: 75%;
+}
+/* line 10, ../sass/partials/_tagcloud.scss */
+ol#tag-cloud li.tier-2 {
+  font-size: 90%;
+}
+/* line 12, ../sass/partials/_tagcloud.scss */
+ol#tag-cloud li.tier-3 {
+  font-size: 105%;
+}
+/* line 14, ../sass/partials/_tagcloud.scss */
+ol#tag-cloud li.tier-4 {
+  font-size: 120%;
+}
+/* line 16, ../sass/partials/_tagcloud.scss */
+ol#tag-cloud li.tier-5 {
+  font-size: 135%;
+}
+/* line 18, ../sass/partials/_tagcloud.scss */
+ol#tag-cloud li.tier-6 {
+  font-size: 150%;
+}
 
+/* line 1, ../sass/partials/_syntax.scss */
+pre {
+  background-color: #f4f4f4;
+  border: 1px solid #dddddd;
+  padding: 0.4em;
+  margin: 20px 0px 20px 9px;
+  overflow-x: auto;
+  font-family: Inconsolata, 'BitStream Vera Sans Mono', Consolas, Monaco, Courier, monospace;
+}
+/* line 8, ../sass/partials/_syntax.scss */
+pre code {
+  border: 0px;
+  padding: 0;
+}
+
+/* line 14, ../sass/partials/_syntax.scss */
+code {
+  background-color: #f4f4f4;
+  border: 1px solid #dddddd;
+  padding: 0 3px;
+  font-family: Inconsolata, 'BitStream Vera Sans Mono', Consolas, Monaco, Courier, monospace;
+}
+
+/* line 21, ../sass/partials/_syntax.scss */
+.highlight {
+  background: #ffffff;
+}
+
+/* line 22, ../sass/partials/_syntax.scss */
+.highlight .c {
+  color: #999988;
+  font-style: italic;
+}
+
+/* Comment */
+/* line 23, ../sass/partials/_syntax.scss */
+.highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+
+/* Error */
+/* line 24, ../sass/partials/_syntax.scss */
+.highlight .k {
+  font-weight: bold;
+}
+
+/* Keyword */
+/* line 25, ../sass/partials/_syntax.scss */
+.highlight .o {
+  font-weight: bold;
+}
+
+/* Operator */
+/* line 26, ../sass/partials/_syntax.scss */
+.highlight .cm {
+  color: #999988;
+  font-style: italic;
+}
+
+/* Comment.Multiline */
+/* line 27, ../sass/partials/_syntax.scss */
+.highlight .cp {
+  color: #999999;
+  font-weight: bold;
+}
+
+/* Comment.Preproc */
+/* line 28, ../sass/partials/_syntax.scss */
+.highlight .c1 {
+  color: #999988;
+  font-style: italic;
+}
+
+/* Comment.Single */
+/* line 29, ../sass/partials/_syntax.scss */
+.highlight .cs {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Comment.Special */
+/* line 30, ../sass/partials/_syntax.scss */
+.highlight .gd {
+  color: #000000;
+  background-color: #ffdddd;
+}
+
+/* Generic.Deleted */
+/* line 31, ../sass/partials/_syntax.scss */
+.highlight .gd .x {
+  color: #000000;
+  background-color: #ffaaaa;
+}
+
+/* Generic.Deleted.Specific */
+/* line 32, ../sass/partials/_syntax.scss */
+.highlight .ge {
+  font-style: italic;
+}
+
+/* Generic.Emph */
+/* line 33, ../sass/partials/_syntax.scss */
+.highlight .gr {
+  color: #aa0000;
+}
+
+/* Generic.Error */
+/* line 34, ../sass/partials/_syntax.scss */
+.highlight .gh {
+  color: #999999;
+}
+
+/* Generic.Heading */
+/* line 35, ../sass/partials/_syntax.scss */
+.highlight .gi {
+  color: #000000;
+  background-color: #ddffdd;
+}
+
+/* Generic.Inserted */
+/* line 36, ../sass/partials/_syntax.scss */
+.highlight .gi .x {
+  color: #000000;
+  background-color: #aaffaa;
+}
+
+/* Generic.Inserted.Specific */
+/* line 37, ../sass/partials/_syntax.scss */
+.highlight .go {
+  color: #888888;
+}
+
+/* Generic.Output */
+/* line 38, ../sass/partials/_syntax.scss */
+.highlight .gp {
+  color: #555555;
+}
+
+/* Generic.Prompt */
+/* line 39, ../sass/partials/_syntax.scss */
+.highlight .gs {
+  font-weight: bold;
+}
+
+/* Generic.Strong */
+/* line 40, ../sass/partials/_syntax.scss */
+.highlight .gu {
+  color: #aaaaaa;
+}
+
+/* Generic.Subheading */
+/* line 41, ../sass/partials/_syntax.scss */
+.highlight .gt {
+  color: #aa0000;
+}
+
+/* Generic.Traceback */
+/* line 42, ../sass/partials/_syntax.scss */
+.highlight .kc {
+  font-weight: bold;
+}
+
+/* Keyword.Constant */
+/* line 43, ../sass/partials/_syntax.scss */
+.highlight .kd {
+  font-weight: bold;
+}
+
+/* Keyword.Declaration */
+/* line 44, ../sass/partials/_syntax.scss */
+.highlight .kp {
+  font-weight: bold;
+}
+
+/* Keyword.Pseudo */
+/* line 45, ../sass/partials/_syntax.scss */
+.highlight .kr {
+  font-weight: bold;
+}
+
+/* Keyword.Reserved */
+/* line 46, ../sass/partials/_syntax.scss */
+.highlight .kt {
+  color: #445588;
+  font-weight: bold;
+}
+
+/* Keyword.Type */
+/* line 47, ../sass/partials/_syntax.scss */
+.highlight .m {
+  color: #009999;
+}
+
+/* Literal.Number */
+/* line 48, ../sass/partials/_syntax.scss */
+.highlight .s {
+  color: #d14;
+}
+
+/* Literal.String */
+/* line 49, ../sass/partials/_syntax.scss */
+.highlight .na {
+  color: #008080;
+}
+
+/* Name.Attribute */
+/* line 50, ../sass/partials/_syntax.scss */
+.highlight .nb {
+  color: #0086B3;
+}
+
+/* Name.Builtin */
+/* line 51, ../sass/partials/_syntax.scss */
+.highlight .nc {
+  color: #445588;
+  font-weight: bold;
+}
+
+/* Name.Class */
+/* line 52, ../sass/partials/_syntax.scss */
+.highlight .no {
+  color: #008080;
+}
+
+/* Name.Constant */
+/* line 53, ../sass/partials/_syntax.scss */
+.highlight .ni {
+  color: #800080;
+}
+
+/* Name.Entity */
+/* line 54, ../sass/partials/_syntax.scss */
+.highlight .ne {
+  color: #990000;
+  font-weight: bold;
+}
+
+/* Name.Exception */
+/* line 55, ../sass/partials/_syntax.scss */
+.highlight .nf {
+  color: #990000;
+  font-weight: bold;
+}
+
+/* Name.Function */
+/* line 56, ../sass/partials/_syntax.scss */
+.highlight .nn {
+  color: #555555;
+}
+
+/* Name.Namespace */
+/* line 57, ../sass/partials/_syntax.scss */
+.highlight .nt {
+  color: #000080;
+}
+
+/* Name.Tag */
+/* line 58, ../sass/partials/_syntax.scss */
+.highlight .nv {
+  color: #008080;
+}
+
+/* Name.Variable */
+/* line 59, ../sass/partials/_syntax.scss */
+.highlight .ow {
+  font-weight: bold;
+}
+
+/* Operator.Word */
+/* line 60, ../sass/partials/_syntax.scss */
+.highlight .w {
+  color: #bbbbbb;
+}
+
+/* Text.Whitespace */
+/* line 61, ../sass/partials/_syntax.scss */
+.highlight .mf {
+  color: #009999;
+}
+
+/* Literal.Number.Float */
+/* line 62, ../sass/partials/_syntax.scss */
+.highlight .mh {
+  color: #009999;
+}
+
+/* Literal.Number.Hex */
+/* line 63, ../sass/partials/_syntax.scss */
+.highlight .mi {
+  color: #009999;
+}
+
+/* Literal.Number.Integer */
+/* line 64, ../sass/partials/_syntax.scss */
+.highlight .mo {
+  color: #009999;
+}
+
+/* Literal.Number.Oct */
+/* line 65, ../sass/partials/_syntax.scss */
+.highlight .sb {
+  color: #d14;
+}
+
+/* Literal.String.Backtick */
+/* line 66, ../sass/partials/_syntax.scss */
+.highlight .sc {
+  color: #d14;
+}
+
+/* Literal.String.Char */
+/* line 67, ../sass/partials/_syntax.scss */
+.highlight .sd {
+  color: #d14;
+}
+
+/* Literal.String.Doc */
+/* line 68, ../sass/partials/_syntax.scss */
+.highlight .s2 {
+  color: #d14;
+}
+
+/* Literal.String.Double */
+/* line 69, ../sass/partials/_syntax.scss */
+.highlight .se {
+  color: #d14;
+}
+
+/* Literal.String.Escape */
+/* line 70, ../sass/partials/_syntax.scss */
+.highlight .sh {
+  color: #d14;
+}
+
+/* Literal.String.Heredoc */
+/* line 71, ../sass/partials/_syntax.scss */
+.highlight .si {
+  color: #d14;
+}
+
+/* Literal.String.Interpol */
+/* line 72, ../sass/partials/_syntax.scss */
+.highlight .sx {
+  color: #d14;
+}
+
+/* Literal.String.Other */
+/* line 73, ../sass/partials/_syntax.scss */
+.highlight .sr {
+  color: #009926;
+}
+
+/* Literal.String.Regex */
+/* line 74, ../sass/partials/_syntax.scss */
+.highlight .s1 {
+  color: #d14;
+}
+
+/* Literal.String.Single */
+/* line 75, ../sass/partials/_syntax.scss */
+.highlight .ss {
+  color: #990073;
+}
+
+/* Literal.String.Symbol */
+/* line 76, ../sass/partials/_syntax.scss */
+.highlight .bp {
+  color: #999999;
+}
+
+/* Name.Builtin.Pseudo */
+/* line 77, ../sass/partials/_syntax.scss */
+.highlight .vc {
+  color: #008080;
+}
+
+/* Name.Variable.Class */
+/* line 78, ../sass/partials/_syntax.scss */
+.highlight .vg {
+  color: #008080;
+}
+
+/* Name.Variable.Global */
+/* line 79, ../sass/partials/_syntax.scss */
+.highlight .vi {
+  color: #008080;
+}
+
+/* Name.Variable.Instance */
+/* line 80, ../sass/partials/_syntax.scss */
+.highlight .il {
+  color: #009999;
+}
+
+/* Literal.Number.Integer.Long */
+/* line 20, ../sass/partials/_application.scss */
+body {
+  font: 1em 'Droid Sans', Verdana, Arial, sans-serif;
+  color: #444;
+  background-color: #f4f4f4;
+  background: #f4f4f4 url("/images/top-bg.png") repeat-x fixed top;
+}
+/* line 26, ../sass/partials/_application.scss */
+body p {
+  margin-bottom: 0.7em;
+}
+/* line 31, ../sass/partials/_application.scss */
+body a:link, body a:visited, body a:active {
+  color: #d71300;
+  text-decoration: none;
+}
+/* line 35, ../sass/partials/_application.scss */
+body a:hover {
+  text-decoration: underline;
+}
+/* line 40, ../sass/partials/_application.scss */
+body #container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+}
+/* line 42, ../sass/partials/_application.scss */
+body #container #header {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 940px;
+  margin-right: 0;
+  margin: 2px 0;
+  font-weight: bold;
+  text-shadow: #333333 1px 2px 0px;
+}
+/* line 52, ../sass/partials/_application.scss */
+body #container #header .inner {
+  padding: 0.3em 0.5em;
+}
+/* line 55, ../sass/partials/_application.scss */
+body #container #header img {
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
+/* line 61, ../sass/partials/_application.scss */
+body #container #content {
+  font-size: 83%;
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 700px;
+  margin-left: 0;
+}
+
+/* line 69, ../sass/partials/_application.scss */
+.bio {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 700px;
+  margin-top: 0.4em;
+  background-color: white;
+  border-bottom: 1px solid #dddddd;
+}
+/* line 11, ../sass/partials/_mixins.scss */
+.bio h1 {
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 0.3em;
+}
+/* line 2, ../sass/partials/_mixins.scss */
+.bio .inner {
+  padding: 0.5em 1em;
+}
+
+/* line 74, ../sass/partials/_application.scss */
+.posts {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 700px;
+  margin-top: 0.4em;
+  background-color: white;
+  border-bottom: 1px solid #dddddd;
+  color: white;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e21403), color-stop(100%, #d71300));
+  background: -webkit-linear-gradient(top, #e21403, #d71300);
+  background: -moz-linear-gradient(top, #e21403, #d71300);
+  background: -o-linear-gradient(top, #e21403, #d71300);
+  background: -ms-linear-gradient(top, #e21403, #d71300);
+  background: linear-gradient(top, #e21403, #d71300);
+  font-size: 130%;
+  text-shadow: #333333 1px 1px 1px;
+  border-top: 1px solid #de7771;
+  border-bottom: 1px solid #a50600;
+}
+/* line 11, ../sass/partials/_mixins.scss */
+.posts h1 {
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 0.3em;
+}
+/* line 2, ../sass/partials/_mixins.scss */
+.posts .inner {
+  padding: 0.5em 1em;
+}
+/* line 82, ../sass/partials/_application.scss */
+.posts h1 {
+  font-size: 83%;
+  margin: 0;
+}
+
+/* line 87, ../sass/partials/_application.scss */
+.post-listing {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 700px;
+  margin-top: 0.4em;
+  background-color: white;
+  border-bottom: 1px solid #dddddd;
+}
+/* line 11, ../sass/partials/_mixins.scss */
+.post-listing h1 {
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 0.3em;
+}
+/* line 2, ../sass/partials/_mixins.scss */
+.post-listing .inner {
+  padding: 0.5em 1em;
+}
+/* line 92, ../sass/partials/_application.scss */
+.post-listing .tag-list {
+  float: right;
+}
+/* line 29, ../sass/partials/_mixins.scss */
+.post-listing .tag-list a {
+  background: none repeat scroll 0 0 #d71300;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+  color: white;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e21403), color-stop(100%, #d71300));
+  background: -webkit-linear-gradient(top, #e21403, #d71300);
+  background: -moz-linear-gradient(top, #e21403, #d71300);
+  background: -o-linear-gradient(top, #e21403, #d71300);
+  background: -ms-linear-gradient(top, #e21403, #d71300);
+  background: linear-gradient(top, #e21403, #d71300);
+  font-size: 130%;
+  font-size: 83%;
+  border-bottom: 1px solid #a50600;
+  border-left: 1px solid #a50600;
+  border-right: 1px solid #a50600;
+  padding: 2px 4px;
+  text-decoration: none;
+}
+/* line 97, ../sass/partials/_application.scss */
+.post-listing .title .date {
+  margin: 0 1.5em 0 0;
+}
+
+/* line 102, ../sass/partials/_application.scss */
+.post {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 700px;
+  margin-top: 0.4em;
+  background-color: white;
+  border-bottom: 1px solid #dddddd;
+}
+/* line 11, ../sass/partials/_mixins.scss */
+.post h1 {
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 0.3em;
+}
+/* line 2, ../sass/partials/_mixins.scss */
+.post .inner {
+  padding: 0.5em 1em;
+}
+/* line 29, ../sass/partials/_mixins.scss */
+.post .tag-list a {
+  background: none repeat scroll 0 0 #d71300;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+  color: white;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e21403), color-stop(100%, #d71300));
+  background: -webkit-linear-gradient(top, #e21403, #d71300);
+  background: -moz-linear-gradient(top, #e21403, #d71300);
+  background: -o-linear-gradient(top, #e21403, #d71300);
+  background: -ms-linear-gradient(top, #e21403, #d71300);
+  background: linear-gradient(top, #e21403, #d71300);
+  font-size: 130%;
+  font-size: 83%;
+  border-bottom: 1px solid #a50600;
+  border-left: 1px solid #a50600;
+  border-right: 1px solid #a50600;
+  padding: 2px 4px;
+  text-decoration: none;
+}
+/* line 111, ../sass/partials/_application.scss */
+.post p.subtitle {
+  margin-bottom: 25px;
+}
+/* line 115, ../sass/partials/_application.scss */
+.post .date {
+  float: right;
+  text-align: center;
+  width: 50px;
+}
+/* line 119, ../sass/partials/_application.scss */
+.post .date .day {
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -o-border-top-left-radius: 5px;
+  -ms-border-top-left-radius: 5px;
+  -khtml-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -o-border-top-right-radius: 5px;
+  -ms-border-top-right-radius: 5px;
+  -khtml-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border: 1px solid #d71300;
+  overflow: hidden;
+  font-size: 1.8em;
+}
+/* line 125, ../sass/partials/_application.scss */
+.post .date .month {
+  overflow: hidden;
+  font-size: 1.0em;
+  background: #d71300;
+  color: white;
+  padding: 0.2em 0 0.1em 0;
+  line-height: 0.9em;
+}
+/* line 133, ../sass/partials/_application.scss */
+.post .date .year {
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -o-border-bottom-left-radius: 5px;
+  -ms-border-bottom-left-radius: 5px;
+  -khtml-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -o-border-bottom-right-radius: 5px;
+  -ms-border-bottom-right-radius: 5px;
+  -khtml-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+  font-size: 1.0em;
+  background: #d71300;
+  color: white;
+  padding: 0 0 0.2em 0;
+  line-height: 0.9em;
+}
+
+/* line 145, ../sass/partials/_application.scss */
+#sidebar {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 220px;
+  margin-right: 0;
+  font-size: 83%;
+  margin-top: 0.4em;
+  background-color: white;
+  border-bottom: 1px solid #dddddd;
+}
+/* line 11, ../sass/partials/_mixins.scss */
+#sidebar h1 {
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 0.3em;
+}
+/* line 2, ../sass/partials/_mixins.scss */
+#sidebar .inner {
+  padding: 0.5em 1em;
+}
+/* line 151, ../sass/partials/_application.scss */
+#sidebar h1 {
+  margin-top: 35px;
+}
+/* line 153, ../sass/partials/_application.scss */
+#sidebar h1:first-child {
+  margin-top: 0;
+}
+
+/* line 159, ../sass/partials/_application.scss */
 input.textfield {
-  -moz-border-radius: 3px 3px 3px 3px;
   background: url("/images/inputshadow.gif") no-repeat scroll left top white;
   border: 1px solid #999999;
   padding: 2px 3px;
-  margin: auto 0; }
+  margin: auto 0;
+}
 
-/* Site */
-#site {
-  font-size: 100%;
-  text-align: left;
-  line-height: 1.5em;
-  width: 920px;
-  margin: 0 auto 0 auto; }
-  #site #sidebar {
-    background: #f0f0f0;
-    float: right;
-    width: 270px;
-    padding: 0 5px 0 5px;
-    margin-bottom: 45px; }
-    #site #sidebar #title {
-      font-weight: bold;
-      margin-bottom: 10px;
-      font-size: 16px;
-      text-align: center; }
-      #site #sidebar #title a {
-        color: #cc0000; }
-        #site #sidebar #title a:hover {
-          color: #262626; }
-    #site #sidebar form#google-search #goog_it {
-      background: url("/images/google.png") no-repeat scroll left top white;
-      width: 20px;
-      height: 20px;
-      border: 0; }
-    #site #sidebar #github, #site #sidebar #tweets {
-      margin-top: 45px; }
-    #site #sidebar #github {
-      text-align: center; }
-    #site #sidebar #tweets h2 {
-      margin-bottom: -5px; }
-    #site #sidebar #tweets li {
-      list-style-type: none;
-      font-size: 12px;
-      background: #eeeeee;
-      padding: 8px 10px;
-      margin: 15px 0; }
-      #site #sidebar #tweets li:after {
-        content: "";
-        border: 8px solid transparent;
-        border-top: 8px solid #eeeeee;
-        border-bottom: 0;
-        width: 0;
-        height: 0;
-        display: block;
-        margin: 5px 0 -15px 0; }
-  #site #content {
-    padding-top: 2em;
-    width: 550px;
-    margin-left: 1em; }
-  #site #footer {
-    clear: both;
-    margin: 80px 0 -5px 0;
-    font-size: 80%; }
-    #site #footer a {
-      color: #8085c1; }
+/* line 166, ../sass/partials/_application.scss */
+form#google-search #goog_it {
+  background: url("/images/google.png") no-repeat scroll left top white;
+  width: 20px;
+  height: 20px;
+  border: 0;
+}
 
-/* About */
-#about #photo {
-  float: left;
-  margin: 0 15px 5px 0; }
-
-/* Posts */
-.post {
-  position: relative;
-  margin-bottom: 4em;
-  /* standard */
-  /* terminal */ }
-  .post h1 {
-    margin-bottom: 0; }
-  .post .subtitle {
-    color: #777777;
-    margin-top: 0;
-    font-size: 0.7em; }
-    .post .subtitle a {
-      color: #777777; }
-  .post .tag-list {
-    padding-left: 2px; }
-  .post .tag-list a {
-    padding: 2px 4px;
-    background: #262626;
-    text-decoration: none;
-    color: white;
-    border-radius: 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px; }
-  .post .date {
-    position: absolute;
-    left: -70px;
-    top: 0px;
-    width: 50px;
-    text-align: center; }
-    .post .date .day {
-      -moz-border-radius-topleft: 5px;
-      -moz-border-radius-topright: 5px;
-      background-color: #262626;
-      color: white;
-      overflow: hidden;
-      padding: 0.2em 0;
-      font-size: 1.2em;
-      /*        padding:7px 0;*/ }
-    .post .date .month {
-      border-left: 1px solid #262626;
-      border-right: 1px solid #262626;
-      background-color: white;
-      color: #262626;
-      padding: 0.2em 0 0.1em 0;
-      font-size: 0.8em;
-      overflow: hidden;
-      font-size: 0.8em;
-      line-height: 0.9em; }
-    .post .date .year {
-      -moz-border-radius-bottomleft: 5px;
-      -moz-border-radius-bottomright: 5px;
-      border-bottom: 1px solid #262626;
-      border-left: 1px solid #262626;
-      border-right: 1px solid #262626;
-      background-color: white;
-      color: #262626;
-      padding: 0 0 0.2em 0;
-      font-size: 0.8em;
-      overflow: hidden;
-      font-size: 0.8em;
-      line-height: 0.9em; }
-  .post .center {
-    text-align: center; }
-  .post img.bordered {
-    border: 1px solid #aaaaaa; }
-  .post .updated {
-    background: #fffeeb;
-    border: 1px solid #aaaaaa;
-    border-width: 1px 0;
-    padding: 10px;
-    margin: 20px 10px; }
-    .post .updated h5 {
-      margin: 6px 0; }
-  .post pre, .post code {
-    font-size: 12px;
-    font-family: Consolas, ConsolasCSS; }
-  .post pre {
-    background-color: #eeeeff;
-    border: 1px solid #dddddd;
-    padding: 0.4em;
-    margin: 20px 0px 20px 9px;
-    overflow-x: auto;
-    /* css-3 */
-    white-space: pre-wrap;
-    /* Mozilla, since 1999 */
-    white-space: -moz-pre-wrap;
-    /* Opera 4-6 */
-    white-space: -pre-wrap;
-    /* Opera 7 */
-    white-space: -o-pre-wrap;
-    /* Internet Explorer 5.5+ */
-    word-wrap: break-word; }
-    .post pre code {
-      border: none; }
-  .post code {
-    border: 1px solid #dddddd;
-    background-color: #eeeeff;
-    padding: 0 0.2em; }
-    .post code.kb {
-      border-width: 2px;
-      border-color: #dedede #bbbbbb #bbbbbb #dedede;
-      -moz-border-radius: 5px;
-      -webkit-border-radius: 5px;
-      background: #eeeeee; }
-  .post pre.terminal {
-    border: 1px solid black;
-    background-color: #333333;
-    color: white; }
-    .post pre.terminal code {
-      background-color: #333333; }
-  .post #older_and_newer {
-    margin-top: 30px; }
-    .post #older_and_newer strong {
-      width: 6em;
-      display: inline-block;
-      text-align: right;
-      margin-right: 5px; }
-
-/* Disqus comments */
-#disqus_thread {
-  margin-top: 45px; }
-  #disqus_thread .dsq-item-cp, #disqus_thread .dsq-comment-options, #disqus_thread li[id^=dsq-more-], #disqus_thread .dsq-by {
-    display: none !important; }
-  #disqus_thread #dsq-content #dsq-comments .dsq-comment-footer {
-    margin-top: 5px; }
-
-/* Google 404 suggestions */
-#goog-fixurl {
-  margin: 25px 0 0 0; }
-  #goog-fixurl .content {
-    width: auto;
-    margin: 0; }
-  #goog-fixurl ul {
-    list-style-type: none; }
-    #goog-fixurl ul li {
-      margin: 15px 0; }
+/* line 173, ../sass/partials/_application.scss */
+img.rss {
+  margin-top: 4px;
+  vertical-align: middle;
+  float: right;
+}

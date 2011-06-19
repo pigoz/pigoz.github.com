@@ -1,0 +1,19 @@
+ol#tag-cloud {
+  margin: 0 0;
+  li {
+    display: inline;
+    line-height: 150%;
+    a {
+      padding: 2px; }
+    &.tier-1 {
+      font-size: 75%; }
+    &.tier-2 {
+      font-size: 90%; }
+    &.tier-3 {
+      font-size: 105%; }
+    &.tier-4 {
+      font-size: 120%; }
+    &.tier-5 {
+      font-size: 135%; }
+    &.tier-6 {
+      font-size: 150%; } } }

@@ -1,0 +1,177 @@
+// Colors and variables definitions
+$code-bg: #f4f4f4;
+$border: #dddddd;
+$bg: #f4f4f4;
+
+$header-color: white;
+$header-shadow: #333;
+$header-bg-light: rgb(226,20,3);
+$header-bg-dark: rgb(215,19,0);
+$header-border-dark: rgb(165,6,0);
+$header-border-light: rgb(222,119,113);
+
+$text-shadow: #333;
+
+// more imports
+@import "partials/mixins";
+@import "partials/tagcloud";
+@import "partials/syntax";
+
+body {
+  font: 1em 'Droid Sans', Verdana, Arial, sans-serif;
+  color: #444;
+  background-color: $bg;
+  background: $bg url('/images/top-bg.png') repeat-x fixed top;
+
+  p {
+    margin-bottom: 0.7em;
+  }
+
+  a {
+    &:link, &:visited, &:active {
+      color: $header-bg-dark;
+      text-decoration: none;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  #container {
+    @include grid-container;
+    #header {
+      @include grid(12);
+      @include omega;
+      //@include pgz-header;
+      margin: 2px 0;
+      font-weight: bold;
+      @include single-text-shadow($text-shadow, 1px, 2px, 0px);
+
+      //border-top: 1px solid $header-border-light;
+      //border-bottom: 1px solid $header-border-dark;
+      .inner {
+        padding: 0.3em 0.5em;
+      }
+      img {
+        vertical-align: middle;
+        margin-right: 0.5em;
+      }
+    }
+
+    #content {
+      @include pgz-smallfont;
+      @include grid(9);
+      @include alpha;
+    }
+  }
+}
+
+.bio {
+  @include grid(9);
+  @include pgz-area;
+  @include pgz-padded;
+}
+.posts {
+  @include grid(9);
+  @include pgz-area;
+  @include pgz-header;
+  @include pgz-padded;
+  @include single-text-shadow($text-shadow, 1px, 1px, 1px);
+  border-top: 1px solid $header-border-light;
+  border-bottom: 1px solid $header-border-dark;
+  h1 {
+    @include pgz-smallfont;
+    margin: 0;
+  }
+}
+.post-listing {
+  @include grid(9);
+  @include pgz-area;
+  @include pgz-padded;
+
+  .tag-list {
+    float: right;
+    @include pgz-tag;
+  }
+
+  .title .date {
+    margin: 0 1.5em 0 0;
+  }
+}
+
+.post {
+  @include grid(9);
+  @include pgz-area;
+  @include pgz-padded;
+
+  .tag-list {
+    @include pgz-tag;
+  }
+
+  p.subtitle {
+    margin-bottom: 25px;
+  }
+
+  .date {
+    float: right;
+    text-align: center;
+    width: 50px;
+    .day {
+      @include border-top-radius(5px);
+      border: 1px solid $header-bg-dark;
+      overflow: hidden;
+      font-size: 1.8em;
+    }
+    .month {
+      overflow: hidden;
+      font-size: 1.0em;
+      background: $header-bg-dark;
+      color: white;
+      padding: 0.2em 0 0.1em 0;
+      line-height: 0.9em;
+    }
+    .year {
+      @include border-bottom-radius(5px);
+      overflow: hidden;
+      font-size: 1.0em;
+      background: $header-bg-dark;
+      color: white;
+      padding: 0 0 0.2em 0;
+      line-height: 0.9em;
+    }
+  }
+}
+
+#sidebar {
+  @include grid(3);
+  @include omega;
+  @include pgz-smallfont;
+  @include pgz-area;
+  @include pgz-padded;
+  h1 {
+    margin-top: 35px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+input.textfield {
+  background:url("/images/inputshadow.gif") no-repeat scroll left top #FFFFFF;
+  border:1px solid #999999;
+  padding: 2px 3px;
+  margin: auto 0;
+}
+
+form#google-search #goog_it {
+  background:url("/images/google.png") no-repeat scroll left top #FFFFFF;
+  width: 20px;
+  height: 20px;
+  border: 0;
+}
+
+img.rss {
+  margin-top: 4px;
+  vertical-align: middle;
+  float: right;
+}

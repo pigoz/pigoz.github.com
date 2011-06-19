@@ -1,0 +1,45 @@
+@mixin pgz-padded {
+  .inner {
+    padding: 0.5em 1em;
+  }
+}
+
+@mixin pgz-area {
+  margin-top: 0.4em;
+  background-color: white;
+  border-bottom: 1px solid $border;
+  h1 {
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 0.3em;
+    }
+}
+
+@mixin pgz-smallfont {
+  font-size: 83%;
+}
+
+@mixin pgz-header {
+  color: $header-color;
+  @include background(linear-gradient(top, $header-bg-light, $header-bg-dark));
+  font-size: 130%;
+}
+
+@mixin pgz-tag {
+  a {
+    background: none repeat scroll 0 0 $header-bg-dark;
+    @include border-radius(4px);
+    @include pgz-header;
+    @include pgz-smallfont;
+
+    border-bottom: 1px solid $header-border-dark;
+    border-left: 1px solid $header-border-dark;
+    border-right: 1px solid $header-border-dark;
+
+    padding: 2px 4px;
+    text-decoration: none;
+    &:hover {
+      //@include background(linear-gradient(top, $bg, $bg));
+    }
+  }
+}

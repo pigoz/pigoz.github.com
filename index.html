@@ -1,7 +1,23 @@
 ---
 layout: default
 ---
+<div class="bio">
+  <div class="inner">
+    <h1>hello,</h1>
+    <p>and welcome to my blog. I'm Stefano Pigozzi a software developer located in Milano, 
+    Italy. I write about <a href="/tags/ruby">Ruby</a>, <a href="/tags/macosx">MacOSX</a> 
+    and other things that interest me.</p>
+    <p>During the day I work mostly with Ruby and Rails doing backend development. In my 
+    free time I like to read good technical books, work on my pet projects (you can find the 
+    useful ones on github), read mangas and try new stuff.
+  </div>
+</div>
 
-{% for post in site.posts limit:5 %}
-{% include post-partial.html %}
+<div class="posts">
+  <div class="inner">
+    <h1>latest posts</h1>
+  </div>
+</div>
+{% for post in site.posts %}
+{% include post-listing.html %}
 {% endfor %}
