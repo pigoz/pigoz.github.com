@@ -10,6 +10,7 @@ $header-bg-dark: rgb(215,19,0);
 $header-border-dark: rgb(165,6,0);
 $header-border-light: rgb(222,119,113);
 
+$text-color: #444;
 $text-shadow: #333;
 
 // more imports
@@ -21,9 +22,10 @@ html, body, #container { height: 100%; }
 
 body {
   font: 1em 'Droid Sans', Verdana, Arial, sans-serif;
-  color: #444;
+  line-height: 1.4em;
+  color: $text-color;
   background-color: $bg;
-  background: $bg url('/images/top-bg.png') repeat-x fixed top;
+  background: $bg url('/images/top-bg.png') repeat-x top;
 
   p {
     margin-bottom: 0.7em;
@@ -46,13 +48,10 @@ body {
     #header {
       @include grid(12);
       @include omega;
-      //@include pgz-header;
       margin: 2px 0 2.2em 0;
       font-weight: bold;
       @include single-text-shadow($text-shadow, 1px, 2px, 0px);
 
-      //border-top: 1px solid $header-border-light;
-      //border-bottom: 1px solid $header-border-dark;
       .inner {
         padding: 0.3em 0.5em;
       }
@@ -78,15 +77,7 @@ body {
 .posts {
   @include grid(9);
   @include pgz-area;
-  //@include pgz-header;
   @include pgz-padded;
-  //@include single-text-shadow($text-shadow, 1px, 1px, 1px);
-  //border-top: 1px solid $header-border-light;
-  //border-bottom: 1px solid $header-border-dark;
-  h1 {
-    //@include pgz-smallfont;
-    margin: 0;
-  }
 }
 .post-listing {
   @include grid(9);
@@ -122,14 +113,15 @@ body {
     width: 50px;
     .day {
       @include border-top-radius(5px);
-      border: 1px solid $header-bg-dark;
+      border: 1px solid $text-color;
       overflow: hidden;
-      font-size: 1.8em;
+      font-size: 2em;
+      padding: 0.15em 0;
     }
     .month {
       overflow: hidden;
       font-size: 1.0em;
-      background: $header-bg-dark;
+      background: $text-color;
       color: white;
       padding: 0.2em 0 0.1em 0;
       line-height: 0.9em;
@@ -138,7 +130,7 @@ body {
       @include border-bottom-radius(5px);
       overflow: hidden;
       font-size: 1.0em;
-      background: $header-bg-dark;
+      background: $text-color;
       color: white;
       padding: 0 0 0.2em 0;
       line-height: 0.9em;
@@ -186,6 +178,7 @@ img.rss {
 
   position: relative;
   margin-top: -2em; /* negative value of footer height */
-  height: 2em;
+  height: 4em;
+  padding-top: 2em;
   clear: both;
 }
