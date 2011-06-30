@@ -25,6 +25,8 @@ body {
   background-color: $bg;
   background: $bg url('/images/top-bg.png') repeat-x top;
 
+
+
   p {
     margin-bottom: 0.7em;
   }
@@ -63,6 +65,15 @@ body {
       @include pgz-smallfont;
       @include grid(9);
       @include alpha;
+
+      ol, ul {
+        margin-bottom: 0.7em;
+        list-style: square;
+        li {
+          margin-left: 2.5em;
+          padding-left: 0em;
+        }
+      }
     }
   }
 }
